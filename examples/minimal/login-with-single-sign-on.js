@@ -26,7 +26,7 @@ const loginWithSingleSignOn = async (remoteToken, unchainedAPI) => {
     }
     if (
       thisDomain === 'localhost' ||
-      !thisDomain === json?.data?.controlConsumeSingleSignOnToken?.domain
+      thisDomain === json?.data?.controlConsumeSingleSignOnToken?.domain
     ) {
       // create sso user if not exist and login
       const ssoUser =
