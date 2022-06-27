@@ -69,8 +69,11 @@ export default (unchainedApi) => (req, res, next) => {
   if (req.query?.token) {
     loginWithSingleSignOn(req.query.token, unchainedApi).then((authCookie) => {
       if (res?.setHeader) {
-        res.setHeader('Set-Cookie', authCookie);
-        next();
+        res.writeHead(303, {
+          'Set-Cookie': authCookie,
+          Location: '/',
+        });
+        res.end();
       }
     });
   } else {
