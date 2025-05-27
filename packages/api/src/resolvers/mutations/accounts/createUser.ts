@@ -9,9 +9,13 @@ import {
   PasswordOrWebAuthnPublicKeyRequiredError,
   PasswordInvalidError,
 } from '../../../errors.js';
+import { registrationRateLimiter } from '../../../middleware/rateLimiter.js';
 
 export default async function createUser(root: never, params: UserRegistrationData, context: Context) {
   const { modules, userId } = context;
+
+  // Apply rate limiting
+  await registrationRateLimiter({ ...context, args: params });
 
   log('mutation createUser', { email: params.email, username: params.username, userId });
 

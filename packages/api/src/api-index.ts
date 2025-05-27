@@ -15,6 +15,7 @@ export * from './errors.js';
 export * as acl from './acl.js';
 export * as roles from './roles/index.js';
 export { createContextResolver, getCurrentContextResolver, setCurrentContextResolver };
+export type { InputValidationOptions } from './plugins/inputValidation.js';
 
 import { buildDefaultTypeDefs } from './schema/index.js';
 import resolvers from './resolvers/index.js';

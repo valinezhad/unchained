@@ -16,6 +16,10 @@ npm run build        # Clean all build artifacts and rebuild all packages withou
 ```bash
 npm test             # Run all tests (unit + integration)
 npm run test:unit    # Run unit tests only
+npm run test:integration  # Run integration tests (starts engine first)
+
+# Run a single test file
+tsx --env-file-if-exists=.env --no-warnings --test tests/specific-test.test.js
 ```
 
 ### Code Quality
