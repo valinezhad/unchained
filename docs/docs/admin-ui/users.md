@@ -54,10 +54,9 @@ The Account tab on the user detail page displays information such as email addre
     - **Email addresses**: This is an editable list of email addresses linked to the user's account.
     - **Web3 addresses**: This is a list of blockchain addresses associated with the user's account. This list is also editable.
     - **Tags**: This is an editable list of tags associated with the user's account.
-    ![diagram](../assets/manage-web3-addresses.png)
+   
     - **Roles**:- The user's assigned roles in the shop.
     - **Password change**:- used to change the user's current password. By default, a user with an "Admin" role has the ability to change any user's password using the "Set Password" form, which is only visible to accounts with the appropriate permissions.
-    ![diagram](../assets/set-password.png)
     - **Web Authn**:- The "WebAuthn" tab in the user detail page displays information about the devices used for [Web authn](https://webauthn.guide/) authentication method. [Web authn](https://webauthn.guide/) is a modern authentication method that allows users to authenticate themselves with their devices, such as smartphones or security keys. The tab provides information about the devices used for [Web authn](https://webauthn.guide/) authentication, such as their names, types, and statuses.
     ![diagram](../assets/user-account-setting-1.png)
 
